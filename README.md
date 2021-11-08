@@ -1,8 +1,8 @@
 # Introduction
 
-Snowtire v2 is a docker image which aims to provide Snowflake users with a turn key docker environment already set-up with Snowflake drivers of the version of your choice with a comprehensive data science environment including Jupyter Notebooks, Python, Spark, R to experiment the various Snowflake connectors available.
+Icetire is a docker image which aims to provide Snowflake users with a turn key docker environment already set-up with Snowflake drivers of the version of your choice with a comprehensive data science environment including Jupyter Notebooks, Python, Spark, R to experiment the various Snowflake connectors available.
 
-Snowtire v2 now supports Spark 3.1 with Scala 2.12, as well as adds support for the Snowpark API.
+Icetire supports Spark 3.1 with Scala 2.12, as well as adds support for the Snowpark API.
 
 - ODBC
 - JDBC
@@ -37,8 +37,8 @@ Change the Directory to a location where you are storing your Docker images:
 ```
 mkdir DockerImages
 cd DockerImages
-git clone https://github.com/zoharsan/snowtire_v2.git
-cd snowtire_v2/
+git clone https://github.com/Snowflake-Labs/icetire.git
+cd icetire/
 ```
 
 If you are just updating the repository to the latest version (always recommended before building a docker image). Run the following command from within your local clone (under snowtire directory):
@@ -57,7 +57,7 @@ There are two ways to build the image, either with the default levels, or by spe
 The default levels are specified in the Docker file (lines starting with ARG). These levels are refreshed on a best level basis, and have been sanity tested. If you are satisfied with these levels, you can simply run the following command:
 
 ```
-docker build --pull -t snowtire .
+docker build --pull -t icetire .
 ```
 
 ### Specify the driver levels while building
@@ -67,7 +67,7 @@ First check the latest clients available in the official [Snowflake documentatio
 Once you have chosen the versions, you can pass the different versions as arguments in the docker build command:
 
 ```
-docker build --pull -t snowtire . \
+docker build --pull -t icetire . \
 --build-arg odbc_version=2.21.8 \
 --build-arg jdbc_version=3.12.10 \
 --build-arg spark_version=2.8.1-spark_2.4 \
@@ -100,16 +100,16 @@ grep: /etc/odbc.ini: No such file or directory
 
 You should see the following message at the very end:
 ```
-Successfully tagged snowtire:latest
+Successfully tagged icetire:latest
 ```
 
 ## Running the image
 ```
-docker run -p 8888:8888 --name spare-0 snowtire:latest
+docker run -p 8888:8888 --name spare-0 icetire:latest
 ```
 If the port 8888 is already taken on your laptop, and you want to use another port, you can simply change the port mapping. For example, for port 9999, it would be:
 ```
-docker run -p 9999:8888 --name spare-1 snowtire:latest
+docker run -p 9999:8888 --name spare-1 icetire:latest
 ```
 
 You should see a message like the following the very first time you bring up this image. Copy the token value in the URL:
@@ -371,4 +371,4 @@ This is caused by Windows CRLF line ending special characters added to the deplo
 ---
 #### Known Issues Log ####
 
-Please check [known issues](known_issues.md) log for known issues with Snowtire. 
+Please check [known issues](known_issues.md) log for known issues with Icetire. 
