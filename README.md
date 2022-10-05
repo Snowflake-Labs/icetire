@@ -81,24 +81,6 @@ docker build --pull -t icetire . \
 
 ### Build completion
 
-You may get some warnings which are non critical, and/or expected. You can safely ignore them:
-```
-...
-debconf: delaying package configuration, since apt-utils is not installed
-...
-==> WARNING: A newer version of conda exists. <==
-  current version: 4.6.14
-  latest version: 4.7.5
-
-Please update conda by running
-
-    $ conda update -n base conda
-...
-grep: /etc/odbcinst.ini: No such file or directory
-...
-grep: /etc/odbc.ini: No such file or directory
-```
-
 You should see the following message at the very end:
 ```
 Successfully tagged icetire:latest
