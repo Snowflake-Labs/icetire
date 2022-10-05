@@ -2,13 +2,14 @@
 
 Icetire is a docker image which aims to provide Snowflake users with a turn key docker environment already set-up with Snowflake drivers of the version of your choice with a comprehensive data science environment including Jupyter Notebooks, Python, Spark, R to experiment the various Snowflake connectors available.
 
-Icetire supports Spark 3.1 with Scala 2.12, as well as adds support for the Snowpark API.
+Icetire supports Spark 3.3 with Scala 2.12, as well as adds support for the Snowpark for Scala, and Snowpark for Python API. The following drivers and connectors for Snowflake are provided:
 
 - ODBC
 - JDBC
 - Python Connector
 - Spark Connector
-- SnowSQL Client.
+- SnowSQL Client
+
 
 SQL Alchemy python package is also installed as part of this docker image.
 
