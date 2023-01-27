@@ -12,6 +12,7 @@
 #
 
 #Start from the following core stack & driver levels versions
+#Picks right image to fix M1 Chip issues
 FROM jupyter/all-spark-notebook@sha256:efe985059f915e7c96a2de7b4ce15fdc110582261ccecf3120fdf5d5c2acae3e
 
 #Setting up default levels for all drivers and connectors
